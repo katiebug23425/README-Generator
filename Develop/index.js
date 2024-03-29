@@ -1,21 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-inquirer
-  .prompt(questions);
-    {
-      type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-    },
-    {
-      type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
-    },
-  ])
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -37,6 +23,31 @@ const questions = [
         message: 'Please enter installation instructions for your application',
       },
 
+      {
+        type: 'input',
+        name: 'Usage Information',
+        message: 'Please enter usage information for your application',
+      },
+
+      {
+        type: 'input',
+        name: 'Contribution Guidelines',
+        message: 'Please enter contribution guidelines for your application',
+      },
+
+      {
+        type: 'input',
+        name: 'Test Instructions',
+        message: 'Please enter test instructions for your application',
+      },
+
+      {
+        type: 'list',
+        message: 'Which license would you like to add to your README?',
+        name: 'License',
+        choices: ['MIT', 'Apache', 'BSD','ISC'],
+      },
+
     {
         type: 'input',
         name: 'GitHub username',
@@ -48,7 +59,7 @@ const questions = [
         name: 'email address',
         message: 'What is your email address?',
       },
-];
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
