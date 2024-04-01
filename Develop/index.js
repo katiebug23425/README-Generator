@@ -9,7 +9,7 @@ const questions = [
     {
         type: 'input',
         name: 'Project Title',
-        message: 'What is your project Title?',
+        message: 'What is your title of your project?',
       },
 
       {
@@ -27,13 +27,13 @@ const questions = [
       {
         type: 'input',
         name: 'Usage Information',
-        message: 'Please enter usage information for your application',
+        message: 'Please enter information on how to best use your application',
       },
 
       {
         type: 'input',
         name: 'Contribution Guidelines',
-        message: 'Please enter contribution guidelines for your application',
+        message: 'Please enter contributors & guidelines for your application',
       },
 
       {
