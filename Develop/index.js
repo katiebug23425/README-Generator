@@ -63,11 +63,20 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, input) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions)
+  .then(function(input){
+      console.log(input);
+    let rmFileInput = generateMarkdown(input);
+    writeToFile(rmFileInput)
+  });
+}
 
 
 // Function call to initialize app
 init();
+
+module.exports = questions;
