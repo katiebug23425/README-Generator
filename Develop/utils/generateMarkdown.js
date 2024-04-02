@@ -62,11 +62,11 @@ function generateMarkdown(input) {
 ## Contributors:
 ### ${input['Contribution Guidelines']}
 
-## Questions & Contact Me:
-### If you have any questions, concerns or comments please contact me at either
+## Questions:
+### If you have any questions, concerns or comments please contact me:
 ### Github: https://github.com/${input['GitHub username']}
 ### or
-### Email Me:${input['Email address']}
+### Email: ${input['Email address']}
 `;
 }
 
