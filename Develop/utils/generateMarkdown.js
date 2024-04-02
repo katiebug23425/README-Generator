@@ -29,15 +29,44 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(input) {
   return `
-  
-  # ${input.title}
+# ${input['Project Title']}
 
-  ## ${renderLicenseSection(input.license)} ${renderLicenseBadge(input.license)}
-  ### ${renderLicenseLink(input.license)}
+## ${renderLicenseSection(input.License)} ${renderLicenseBadge(input.License)}
 
+### [License Information](${renderLicenseLink(input.License)})
 
+## Table of Contents:
 
+### * [Description](#description)
+### * [License](#license)
+### * [Installation](#installation)
+### * [Usage](#usage)
+### * [Tests](#tests)
+### * [Contributors](#contributors)
+### * [Questions](#questions)
 
+## Description
+### ${input['Project Description']}
+
+## Installation:
+### You must install the following items for this app to function properly:
+### ${input['Installation Instructions']}
+
+## Usage:
+### ${input['Usage Information']}
+
+## Tests:
+### Run the following commands in your terminal to test this app:
+### ${input['Test Instructions']}
+
+## Contributors:
+### ${input['Contribution Guidelines']}
+
+## Questions & Contact Me:
+### If you have any questions, concerns or comments please contact me at either
+### Github: https://github.com/${input['GitHub username']}
+### or
+### Email Me:${input['Email address']}
 `;
 }
 

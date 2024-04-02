@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+var prompt = inquirer.createPromptModule();
 
 
 // array of questions for user input
@@ -56,22 +57,24 @@ const questions = [
 
       {
         type: 'input',
-        name: 'email address',
+        name: 'Email address',
         message: 'What is your email address?',
       },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, input) {}
+function writeToFile(fileName, data) {
+  fs.writeFileSync(fileName, data);
+  console.log('README.md file has been successfully generated!');
+}
 
-// function to initialize app
+// function to initialize app()
 function init() {
-  inquirer.prompt(questions)
-  .then(function(input){
-      console.log(input);
-    let rmFileInput = generateMarkdown(input);
-    writeToFile(rmFileInput)
-  });
+  prompt(questions)
+      .then(function(input) {
+          let rmFileInput = generateMarkdown(input);
+          writeToFile('README.md', rmFileInput);
+      });
 }
 
 
