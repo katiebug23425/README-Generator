@@ -4,7 +4,7 @@
 An application that prompts questions to be answered and creates a README.md file dynamically from the user's input 
 
 ## Usage
-Save time and focus more on the project at hand with this great tool to generate your README for you
+Save time and focus more on the project at hand with this great tool to generate your README for you. Start the application invoking the 'node index.js' command, answer the quesions and let the magic happen!
 
 ## Screenshot
 ![screenshot for README.md generator application](./Develop/utils/read,me%20screenhot%201.png)
